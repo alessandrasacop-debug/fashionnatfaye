@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FERRERO DESIGN — Sustainable Evening Couture &amp; Sculpted Streetwear</title>
+
+  <!-- Google Fonts: Cormorant Garamond (Editorial Serif) & Inter (Geometric Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ferreroPink: '#F9E4EC',
+            ferreroGreen: '#E4F1EA',
+            ferreroInk: '#1A241E',
+            ferreroForest: '#2E4639',
+            ferreroRoseDeep: '#7A3E53'
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', '-apple-system', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Embedded Editorial Styles & Micro-Interactions -->
+  <style>
+    :root {
+      --pink-soft: #F9E4EC;
+      --green-soft: #E4F1EA;
+      --white-pure: #FFFFFF;
+      --ink-deep: #1A241E;
+      --forest-accent: #2E4639;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: var(--white-pure);
+      color: var(--ink-deep);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, .font-editorial {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+    }
+
+    /* Scroll Reveal Micro-Interaction */
+    .fd-reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .fd-reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Lookbook Card Hover Reveal */
+    .lookbook-card .lookbook-img {
+      transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .lookbook-card:hover .lookbook-img {
+      transform: scale(1.05);
+    }
+
+    .lookbook-card .lookbook-overlay {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.45s ease, transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .lookbook-card:hover .lookbook-overlay,
+    .lookbook-card:focus-within .lookbook-overlay {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Subtle Atelier Grid Pattern */
+    .atelier-grid-bg {
+      background-image:
+        linear-gradient(to right, rgba(26, 36, 30, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(26, 36, 30, 0.04) 1px, transparent 1px);
+      background-size: 44px 44px;
+    }
+
+    /* Custom Scrollbar for Horizontal Process Strip */
+    .process-scroll::-webkit-scrollbar {
+      height: 6px;
+    }
+    .process-scroll::-webkit-scrollbar-track {
+      background: #E4F1EA;
+      border-radius: 9999px;
+    }
+    .process-scroll::-webkit-scrollbar-thumb {
+      background: #1A241E;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="bg-white text-[#1A241E] antialiased selection:bg-[#F9E4EC] selection:text-[#1A241E]">
+
+  <!-- ===================================================================== -->
+  <!-- NAVIGATION HEADER                                                     -->
+  <!-- ===================================================================== -->
+  <header id="site-header" class="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-[#1A241E]/10 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 h-20 flex items-center justify-between">
+      <!-- Brand Wordmark -->
+      <a href="#top" class="flex flex-col leading-none group">
+        <span class="font-editorial text-2xl sm:text-3xl tracking-[0.2em] font-normal uppercase text-[#1A241E] group-hover:text-[#2E4639] transition-colors">
+          Ferrero Design
+        </span>
+        <span class="text-[10px] tracking-[0.28em] uppercase text-[#1A241E]/60 mt-1">
+          Couture &amp; Sculpted Streetwear
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav aria-label="Primary Navigation" class="hidden lg:flex items-center gap-8">
+        <a href="#lookbook" class="text-xs uppercase tracking-[0.22em] text-[#1A241E]/80 hover:text-[#1A241E] transition-colors">Lookbook</a>
+        <a href="#atelier-process" class="text-xs uppercase tracking-[0.22em] text-[#1A241E]/80 hover:text-[#1A241E] transition-colors">Atelier</a>
+        <a href="#philosophy" class="text-xs uppercase tracking-[0.22em] text-[#1A241E]/80 hover:text-[#1A241E] transition-colors">Philosophy</a>
+        <a href="#atelier-games" class="text-xs uppercase tracking-[0.22em] text-[#1A241E]/80 hover:text-[#1A241E] transition-colors">Atelier Games</a>
+        <a href="#inquiries" class="px-5 py-2.5 rounded-full bg-[#1A241E] text-white text-xs uppercase tracking-[0.22em] hover:bg-[#2E4639] transition-colors">
+          Inquiries
+        </a>
+      </nav>
+
+      <!-- Mobile Menu Toggle -->
+      <button id="mobile-menu-btn" type="button" aria-label="Toggle Menu" aria-expanded="false" class="lg:hidden p-3 rounded-full bg-[#F9E4EC] text-[#1A241E] hover:bg-[#E4F1EA] transition-colors">
+        <svg id="icon-hamburger" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 7.5h16.5M3.75 12h16.5m-16.5 4.5h16.5" />
+        </svg>
+        <svg id="icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-[#1A241E]/10 px-6 py-6">
+      <div class="flex flex-col space-y-4">
+        <a href="#lookbook" class="mobile-link py-2 text-xs uppercase tracking-[0.24em] text-[#1A241E] border-b border-[#1A241E]/10">Lookbook</a>
+        <a href="#atelier-process" class="mobile-link py-2 text-xs uppercase tracking-[0.24em] text-[#1A241E] border-b border-[#1A241E]/10">01–03 Atelier Process</a>
+        <a href="#philosophy" class="mobile-link py-2 text-xs uppercase tracking-[0.24em] text-[#1A241E] border-b border-[#1A241E]/10">Designer Philosophy</a>
+        <a href="#atelier-games" class="mobile-link py-2 text-xs uppercase tracking-[0.24em] text-[#1A241E] border-b border-[#1A241E]/10">Atelier Games</a>
+        <a href="#inquiries" class="mobile-link mt-2 inline-flex justify-center py-3.5 px-6 rounded-full bg-[#1A241E] text-white text-xs uppercase tracking-[0.22em]">
+          Bespoke Inquiries
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ===================================================================== -->
+    <!-- 1. FULL-BLEED EDITORIAL HERO SECTION                                  -->
+    <!-- ===================================================================== -->
+    <section class="relative min-h-[88vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#F9E4EC] via-white to-[#E4F1EA]">
+      <!-- Editorial Full-Bleed Visual Layer -->
+      <img
+        src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1800&q=85"
+        onerror="this.onerror=null;this.src='https://placehold.co/1800x1100/F9E4EC/1A241E?text=FERRERO+DESIGN+ATELIER';"
+        alt="Ferrero Design editorial model wearing sculpted sustainable evening couture and botanical silk"
+        class="absolute inset-0 w-full h-full object-cover object-center opacity-45 mix-blend-multiply"
+      />
+
+      <!-- Soft Light Pink / White / Light Green Editorial Veil -->
+      <div class="absolute inset-0 bg-gradient-to-b from-white/75 via-[#F9E4EC]/45 to-[#E4F1EA]/80 pointer-events-none"></div>
+
+      <!-- Hero Editorial Content -->
+      <div class="relative z-10 max-w-5xl mx-auto px-5 sm:px-8 lg:px-12 py-24 text-center">
+        <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/90 border border-[#1A241E]/10 mb-7 shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-[#2E4639]"></span>
+          <span class="text-[11px] uppercase tracking-[0.28em] text-[#1A241E]/80">
+            Sustainable Evening Couture &amp; Sculpted Streetwear
+          </span>
+        </div>
+
+        <h1 class="font-editorial text-5xl sm:text-7xl md:text-8xl font-light tracking-[-0.02em] text-[#1A241E] leading-[0.98]">
+          FERRERO DESIGN
+          <span class="block italic font-normal text-3xl sm:text-5xl md:text-6xl text-[#2E4639] mt-3">
+            Where Botanical Drape Meets Architectural Street
+          </span>
+        </h1>
+
+        <p class="mt-7 max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-[#1A241E]/80 font-light leading-relaxed">
+          Hand-finished evening gowns and structured street silhouettes crafted from organic peace silk, regenerative hemp, and zero-waste pattern architecture in soft rose, botanical sage, and pure chalk.
+        </p>
+
+        <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="#lookbook"
+            class="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-[#1A241E] text-white text-xs uppercase tracking-[0.24em] hover:bg-[#2E4639] transition-all duration-300 shadow-sm"
+          >
+            <span>Explore Collections</span>
+            <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-y-0.5" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+            </svg>
+          </a>
+          <a
+            href="#inquiries"
+            class="inline-flex items-center justify-center px-7 py-4 rounded-full bg-white/90 border border-[#1A241E]/15 text-[#1A241E] text-xs uppercase tracking-[0.22em] hover:bg-[#F9E4EC] transition-colors duration-300"
+          >
+            Book Private Fitting
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 2. ASYMMETRICAL LOOKBOOK GRID (4 SEASONAL COLLECTIONS)                -->
+    <!-- ===================================================================== -->
+    <section id="lookbook" class="py-24 md:py-32 px-5 sm:px-8 lg:px-12 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14 fd-reveal">
+          <div>
+            <p class="text-xs uppercase tracking-[0.28em] text-[#1A241E]/60 mb-3">Seasonal Lookbook · 04 Capsules</p>
+            <h2 class="font-editorial text-4xl sm:text-6xl font-light text-[#1A241E] leading-tight">
+              Curated <span class="italic text-[#2E4639]">Collections</span>
+            </h2>
+          </div>
+          <p class="max-w-md text-sm text-[#1A241E]/75 font-light leading-relaxed">
+            Hover or focus any look to inspect the garment title, textile provenance, and tactile finish crafted inside the Ferrero Design studio.
+          </p>
+        </div>
+
+        <!-- Asymmetrical 12-Column Editorial Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-8">
+
+          <!-- Collection 01: Wide Asymmetric Feature (7 Cols) -->
+          <article tabindex="0" class="lookbook-card fd-reveal md:col-span-7 group relative rounded-[2rem] overflow-hidden bg-[#F9E4EC] min-h-[420px] sm:min-h-[520px] shadow-sm focus:outline-none focus:ring-2 focus:ring-[#1A241E]">
+            <img
+              src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=85"
+              onerror="this.onerror=null;this.src='https://placehold.co/1200x900/F9E4EC/1A241E?text=01+PETAL+NOCTURNE+COUTURE';"
+              alt="Petal Nocturne Sculpted Evening Gown in pale rose silk organza"
+              class="lookbook-img w-full h-full object-cover object-top"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1A241E]/80 via-[#1A241E]/20 to-transparent"></div>
+
+            <!-- Always-visible Season Tag -->
+            <div class="absolute top-5 left-5 px-4 py-1.5 rounded-full bg-white/95 text-[11px] uppercase tracking-[0.22em] text-[#1A241E]">
+              Autumn / Winter · Evening Couture
+            </div>
+
+            <!-- Hover / Focus Reveal Drawer -->
+            <div class="lookbook-overlay absolute inset-x-4 bottom-4 sm:inset-x-6 sm:bottom-6 p-5 sm:p-6 rounded-2xl bg-white/95 backdrop-blur-md border border-[#1A241E]/10 text-[#1A241E]">
+              <div class="flex flex-wrap items-baseline justify-between gap-2">
+                <span class="text-[10px] uppercase tracking-[0.25em] text-[#2E4639] font-medium">Look 01 · Petal Nocturne</span>
+                <span class="text-[11px] uppercase tracking-[0.18em] text-[#1A241E]/60">Bespoke Edition</span>
+              </div>
+              <h3 class="font-editorial text-2xl sm:text-3xl mt-1">The Camellia Bias Cascade Gown</h3>
+              <p class="mt-2 text-xs sm:text-sm text-[#1A241E]/80 font-light">
+                <strong class="font-medium">Fabric Details:</strong> 100% GOTS-certified mulberry peace silk &amp; weightless silk organza in Petal Blush (#F9E4EC), hand-rolled picot hems with zero synthetic lining.
+              </p>
+            </div>
+          </article>
+
+          <!-- Collection 02: Vertical Tall Card (5 Cols) -->
+          <article tabindex="0" class="lookbook-card fd-reveal md:col-span-5 group relative rounded-[2rem] overflow-hidden bg-[#E4F1EA] min-h-[420px] sm:min-h-[520px] shadow-sm focus:outline-none focus:ring-2 focus:ring-[#1A241E]">
+            <img
+              src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=85"
+              onerror="this.onerror=null;this.src='https://placehold.co/1000x1200/E4F1EA/1A241E?text=02+VERDANT+STREET+ARCHITECTURE';"
+              alt="Verdant Street Architecture cropped jacket and wide pleated trousers"
+              class="lookbook-img w-full h-full object-cover object-top"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1A241E]/80 via-[#1A241E]/15 to-transparent"></div>
+
+            <div class="absolute top-5 left-5 px-4 py-1.5 rounded-full bg-white/95 text-[11px] uppercase tracking-[0.22em] text-[#1A241E]">
+              Spring / Summer · Sculpted Street
+            </div>
+
+            <div class="lookbook-overlay absolute inset-x-4 bottom-4 sm:inset-x-6 sm:bottom-6 p-5 sm:p-6 rounded-2xl bg-white/95 backdrop-blur-md border border-[#1A241E]/10 text-[#1A241E]">
+              <div class="flex flex-wrap items-baseline justify-between gap-2">
+                <span class="text-[10px] uppercase tracking-[0.25em] text-[#2E4639] font-medium">Look 02 · Verdant Cadence</span>
+                <span class="text-[11px] uppercase tracking-[0.18em] text-[#1A241E]/60">Ready-to-Wear</span>
+              </div>
+              <h3 class="font-editorial text-2xl sm:text-3xl mt-1">Botanical Box-Pleat Trench &amp; Trouser</h3>
+              <p class="mt-2 text-xs sm:text-sm text-[#1A241E]/80 font-light">
+                <strong class="font-medium">Fabric Details:</strong> Heavyweight regenerative hemp-linen twill dyed with eucalyptus &amp; green tea leaf in Mint Sage (#E4F1EA), corozo nut buttons.
+              </p>
+            </div>
+          </article>
+
+          <!-- Collection 03: Staggered Left Card (5 Cols) -->
+          <article tabindex="0" class="lookbook-card fd-reveal md:col-span-5 group relative rounded-[2rem] overflow-hidden bg-[#F9E4EC]/70 min-h-[380px] sm:min-h-[460px] shadow-sm focus:outline-none focus:ring-2 focus:ring-[#1A241E]">
+            <img
+              src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=85"
+              onerror="this.onerror=null;this.src='https://placehold.co/1000x1000/F9E4EC/1A241E?text=03+CHALK+MONOLITH+CAPSULE';"
+              alt="Chalk Monolith architectural tailoring in crisp organic cotton"
+              class="lookbook-img w-full h-full object-cover object-top"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1A241E]/80 via-[#1A241E]/15 to-transparent"></div>
+
+            <div class="absolute top-5 left-5 px-4 py-1.5 rounded-full bg-white/95 text-[11px] uppercase tracking-[0.22em] text-[#1A241E]">
+              Resort · Minimalist Tailoring
+            </div>
+
+            <div class="lookbook-overlay absolute inset-x-4 bottom-4 sm:inset-x-6 sm:bottom-6 p-5 sm:p-6 rounded-2xl bg-white/95 backdrop-blur-md border border-[#1A241E]/10 text-[#1A241E]">
+              <div class="flex flex-wrap items-baseline justify-between gap-2">
+                <span class="text-[10px] uppercase tracking-[0.25em] text-[#2E4639] font-medium">Look 03 · Chalk Monolith</span>
+                <span class="text-[11px] uppercase tracking-[0.18em] text-[#1A241E]/60">Capsule 03</span>
+              </div>
+              <h3 class="font-editorial text-2xl sm:text-3xl mt-1">Sculpted Lapel Overshirt &amp; Column Skirt</h3>
+              <p class="mt-2 text-xs sm:text-sm text-[#1A241E]/80 font-light">
+                <strong class="font-medium">Fabric Details:</strong> Crisp high-density organic cotton poplin in Pure Chalk (#FFFFFF) with concealed horn placket and articulated darts.
+              </p>
+            </div>
+          </article>
+
+          <!-- Collection 04: Staggered Right Wide Card (7 Cols) -->
+          <article tabindex="0" class="lookbook-card fd-reveal md:col-span-7 group relative rounded-[2rem] overflow-hidden bg-[#E4F1EA]/80 min-h-[380px] sm:min-h-[460px] shadow-sm focus:outline-none focus:ring-2 focus:ring-[#1A241E]">
+            <img
+              src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=85"
+              onerror="this.onerror=null;this.src='https://placehold.co/1200x900/E4F1EA/1A241E?text=04+FLORA+SOLSTICE+COUTURE';"
+              alt="Flora Solstice asymmetric evening drape and street bomber"
+              class="lookbook-img w-full h-full object-cover object-center"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1A241E]/80 via-[#1A241E]/20 to-transparent"></div>
+
+            <div class="absolute top-5 left-5 px-4 py-1.5 rounded-full bg-white/95 text-[11px] uppercase tracking-[0.22em] text-[#1A241E]">
+              Solstice · Couture &amp; Street Hybrid
+            </div>
+
+            <div class="lookbook-overlay absolute inset-x-4 bottom-4 sm:inset-x-6 sm:bottom-6 p-5 sm:p-6 rounded-2xl bg-white/95 backdrop-blur-md border border-[#1A241E]/10 text-[#1A241E]">
+              <div class="flex flex-wrap items-baseline justify-between gap-2">
+                <span class="text-[10px] uppercase tracking-[0.25em] text-[#2E4639] font-medium">Look 04 · Flora Solstice</span>
+                <span class="text-[11px] uppercase tracking-[0.18em] text-[#1A241E]/60">Atelier Archive</span>
+              </div>
+              <h3 class="font-editorial text-2xl sm:text-3xl mt-1">Asymmetric Petal Drape &amp; cropped Bomber</h3>
+              <p class="mt-2 text-xs sm:text-sm text-[#1A241E]/80 font-light">
+                <strong class="font-medium">Fabric Details:</strong> Reclaimed deadstock Tencel satin &amp; madder-rose organic voile (#F9E4EC / #E4F1EA) with hand-pleated shoulder volume.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 3. THE DESIGN PROCESS (ATELIER — 01, 02, 03)                          -->
+    <!-- ===================================================================== -->
+    <section id="atelier-process" class="py-24 md:py-32 px-5 sm:px-8 lg:px-12 bg-[#E4F1EA]/55 atelier-grid-bg border-y border-[#1A241E]/10">
+      <div class="max-w-7xl mx-auto">
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14 fd-reveal">
+          <div>
+            <p class="text-xs uppercase tracking-[0.28em] text-[#1A241E]/60 mb-3">Inside the Studio</p>
+            <h2 class="font-editorial text-4xl sm:text-6xl font-light text-[#1A241E] leading-tight">
+              The Atelier <span class="italic text-[#2E4639]">Process</span>
+            </h2>
+          </div>
+          <p class="max-w-md text-sm text-[#1A241E]/75 font-light leading-relaxed">
+            Every Ferrero Design garment moves deliberately through three studio stages—honoring slow construction, zero-waste geometry, and tactile longevity.
+          </p>
+        </div>
+
+        <!-- 3-Step Visual Breakdown (Responsive Grid + Horizontal Scroll Support on Narrow Viewports) -->
+        <div class="process-scroll grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+
+          <!-- Step 01: Concept & Sketching -->
+          <div class="fd-reveal bg-white rounded-[2rem] p-7 sm:p-9 border border-[#1A241E]/10 shadow-sm hover:-translate-y-1 transition-transform duration-300 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <span class="font-editorial text-4xl sm:text-5xl italic text-[#2E4639]">01</span>
+                <span class="px-3.5 py-1 rounded-full bg-[#F9E4EC] text-[10px] uppercase tracking-[0.22em] text-[#1A241E]">
+                  Stage One
+                </span>
+              </div>
+              <h3 class="font-editorial text-2xl sm:text-3xl text-[#1A241E]">Concept &amp; Sketching</h3>
+              <p class="mt-3 text-sm text-[#1A241E]/75 font-light leading-relaxed">
+                Each silhouette begins with gouache and ink proportion studies balancing fluid evening movement against crisp streetwear structure. Zero-waste jigsaw pattern blocks are drafted before a single meter is cut.
+              </p>
+            </div>
+            <div class="mt-8 pt-5 border-t border-[#1A241E]/10 flex items-center justify-between text-[11px] uppercase tracking-[0.2em] text-[#1A241E]/65">
+              <span>Zero-Waste Blocks</span>
+              <span>Gouache &amp; Ink</span>
+            </div>
+          </div>
+
+          <!-- Step 02: Draping & Textiles -->
+          <div class="fd-reveal bg-[#F9E4EC]/65 rounded-[2rem] p-7 sm:p-9 border border-[#1A241E]/10 shadow-sm hover:-translate-y-1 transition-transform duration-300 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <span class="font-editorial text-4xl sm:text-5xl italic text-[#2E4639]">02</span>
+                <span class="px-3.5 py-1 rounded-full bg-white text-[10px] uppercase tracking-[0.22em] text-[#1A241E]">
+                  Stage Two
+                </span>
+              </div>
+              <h3 class="font-editorial text-2xl sm:text-3xl text-[#1A241E]">Draping &amp; Textiles</h3>
+              <p class="mt-3 text-sm text-[#1A241E]/75 font-light leading-relaxed">
+                We pin unbleached organic silks, hemp twills, and botanical-dyed cloths directly on the dress form—testing bias tension, pleat depth, and light refraction in soft rose (#F9E4EC) and mint green (#E4F1EA).
+              </p>
+            </div>
+            <div class="mt-8 pt-5 border-t border-[#1A241E]/10 flex items-center justify-between text-[11px] uppercase tracking-[0.2em] text-[#1A241E]/65">
+              <span>Moulage on Stand</span>
+              <span>Botanical Pigments</span>
+            </div>
+          </div>
+
+          <!-- Step 03: Final Construction -->
+          <div class="fd-reveal bg-[#E4F1EA]/80 rounded-[2rem] p-7 sm:p-9 border border-[#1A241E]/10 shadow-sm hover:-translate-y-1 transition-transform duration-300 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <span class="font-editorial text-4xl sm:text-5xl italic text-[#2E4639]">03</span>
+                <span class="px-3.5 py-1 rounded-full bg-white text-[10px] uppercase tracking-[0.22em] text-[#1A241E]">
+                  Stage Three
+                </span>
+              </div>
+              <h3 class="font-editorial text-2xl sm:text-3xl text-[#1A241E]">Final Construction</h3>
+              <p class="mt-3 text-sm text-[#1A241E]/75 font-light leading-relaxed">
+                Master tailors and couture finishers assemble each piece in small numbered runs using French seams, hand-basted linings, and biodegradable trimmings—built to endure across decades and seasons.
+              </p>
+            </div>
+            <div class="mt-8 pt-5 border-t border-[#1A241E]/10 flex items-center justify-between text-[11px] uppercase tracking-[0.2em] text-[#1A241E]/65">
+              <span>French Seams</span>
+              <span>Small-Batch Finish</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 4. SPLIT-SCREEN DESIGNER BIO & PHILOSOPHY                             -->
+    <!-- ===================================================================== -->
+    <section id="philosophy" class="py-24 md:py-32 px-5 sm:px-8 lg:px-12 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+
+          <!-- Left Split: Portrait Frame -->
+          <div class="lg:col-span-6 fd-reveal">
+            <div class="relative rounded-[2.25rem] overflow-hidden bg-[#F9E4EC] p-3 sm:p-4 shadow-sm">
+              <img
+                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1000&q=85"
+                onerror="this.onerror=null;this.src='https://placehold.co/900x1100/F9E4EC/1A241E?text=CAMILA+FERRERO+ATELIER';"
+                alt="Camila Ferrero, Founder and Creative Director of Ferrero Design"
+                class="w-full h-[440px] sm:h-[560px] object-cover object-top rounded-[1.75rem]"
+              />
+              <div class="mt-3 px-2 py-1 flex items-center justify-between text-[11px] uppercase tracking-[0.2em] text-[#1A241E]/70">
+                <span>Camila Ferrero · Founder &amp; Creative Director</span>
+                <span>Est. Milan &amp; Manila</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Split: Philosophy & Craftsmanship Narrative -->
+          <div class="lg:col-span-6 fd-reveal space-y-6">
+            <p class="text-xs uppercase tracking-[0.28em] text-[#2E4639] font-medium">
+              Designer Bio &amp; Philosophy
+            </p>
+            <h2 class="font-editorial text-4xl sm:text-5xl lg:text-6xl font-light text-[#1A241E] leading-[1.06]">
+              Quiet Luxury Rooted in <span class="italic text-[#2E4639]">Living Materials</span>
+            </h2>
+
+            <p class="text-sm sm:text-base text-[#1A241E]/80 font-light leading-relaxed">
+              Founded by designer Camila Ferrero, <strong class="font-medium text-[#1A241E]">FERRERO DESIGN</strong> bridges high-drama evening couture with the effortless posture of modern streetwear. Every garment treats sustainability not as a constraint, but as a sculptural catalyst.
+            </p>
+
+            <p class="text-sm sm:text-base text-[#1A241E]/80 font-light leading-relaxed">
+              By pairing delicate petal hues (#F9E4EC) and botanical greens (#E4F1EA) with stark architectural white (#FFFFFF), the studio creates pieces that feel luminous in daylight and commanding after dark—crafted in partnership with regenerative fiber cooperatives and artisan ateliers.
+            </p>
+
+            <!-- Philosophy Pillars -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+              <div class="p-4 rounded-2xl bg-[#F9E4EC]/60 border border-[#1A241E]/10">
+                <div class="font-editorial text-2xl text-[#1A241E]">100%</div>
+                <div class="text-[11px] uppercase tracking-[0.18em] text-[#1A241E]/70 mt-1">Traceable Natural Fibers</div>
+              </div>
+              <div class="p-4 rounded-2xl bg-[#E4F1EA]/70 border border-[#1A241E]/10">
+                <div class="font-editorial text-2xl text-[#1A241E]">Zero</div>
+                <div class="text-[11px] uppercase tracking-[0.18em] text-[#1A241E]/70 mt-1">Synthetic Micro-Shedding</div>
+              </div>
+              <div class="p-4 rounded-2xl bg-white border border-[#1A241E]/15">
+                <div class="font-editorial text-2xl text-[#1A241E]">Bespoke</div>
+                <div class="text-[11px] uppercase tracking-[0.18em] text-[#1A241E]/70 mt-1">Made-to-Order Precision</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 5. INTERACTIVE ATELIER GAMES                                          -->
+    <!-- ===================================================================== -->
+    <section id="atelier-games" class="py-24 md:py-32 px-5 sm:px-8 lg:px-12 bg-gradient-to-b from-[#F9E4EC]/45 via-white to-[#E4F1EA]/55 border-t border-[#1A241E]/10">
+      <div class="max-w-7xl mx-auto">
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14 fd-reveal">
+          <div>
+            <p class="text-xs uppercase tracking-[0.28em] text-[#1A241E]/60 mb-3">Interactive Studio Lab</p>
+            <h2 class="font-editorial text-4xl sm:text-6xl font-light text-[#1A241E] leading-tight">
+              Atelier <span class="italic text-[#2E4639]">Mini-Games</span>
+            </h2>
+          </div>
+          <p class="max-w-md text-sm text-[#1A241E]/75 font-light leading-relaxed">
+            Curate runway ensembles in <span class="font-medium text-[#1A241E]">Silhouette &amp; Textile Matcher</span> or harvest sustainable textiles on the 2D canvas in <span class="font-medium text-[#1A241E]">Fabric &amp; Stitch Reflex (Pattern Rush)</span>.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 xl:grid-cols-2 gap-8 lg:gap-10">
+
+          <!-- GAME A: SILHOUETTE & TEXTILE MATCHER -->
+          <div class="fd-reveal bg-white rounded-[2rem] border border-[#1A241E]/10 p-6 sm:p-8 shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-3 pb-5 border-b border-[#1A241E]/10">
+                <div>
+                  <span class="text-[10px] uppercase tracking-[0.24em] text-[#1A241E]/60">01 · Editorial Curation</span>
+                  <h3 class="font-editorial text-2xl sm:text-3xl text-[#1A241E] mt-1">Silhouette &amp; Textile Matcher</h3>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <div class="px-4 py-2 rounded-full bg-[#E4F1EA] text-[#1A241E] text-xs uppercase tracking-[0.16em]">
+                    Score: <strong id="matcher-score" class="font-semibold">0</strong>
+                  </div>
+                  <button id="matcher-reset-btn" type="button" class="px-3.5 py-2 rounded-full border border-[#1A241E]/20 text-[11px] uppercase tracking-[0.18em] text-[#1A241E] hover:bg-[#F9E4EC] transition-colors">
+                    Reset
+                  </button>
+                </div>
+              </div>
+
+              <!-- Casting Brief Banner -->
+              <div class="mt-5 p-4 sm:p-5 rounded-2xl bg-[#F9E4EC]/65 border border-[#1A241E]/10">
+                <div class="flex items-center justify-between gap-2">
+                  <span class="text-[10px] uppercase tracking-[0.24em] text-[#1A241E]/65">Runway Brief</span>
+                  <span id="matcher-brief-counter" class="text-[11px] uppercase tracking-[0.18em] text-[#2E4639] font-medium">Brief 1 / 4</span>
+                </div>
+                <h4 id="matcher-brief-title" class="font-editorial text-xl sm:text-2xl text-[#1A241E] mt-1">Petal Nocturne Gala</h4>
+                <p id="matcher-brief-desc" class="text-xs sm:text-sm text-[#1A241E]/80 font-light mt-1">
+                  Pair a fluid evening silhouette with light pink peace silk and a delicate drape finish.
+                </p>
+              </div>
+
+              <!-- Stepwise Selectors -->
+              <div class="mt-6 space-y-5">
+                <div>
+                  <label class="block text-[11px] uppercase tracking-[0.22em] text-[#1A241E]/65 mb-2">1. Choose Silhouette</label>
+                  <div id="matcher-silhouettes" class="grid grid-cols-1 sm:grid-cols-3 gap-2.5"></div>
+                </div>
+
+                <div>
+                  <label class="block text-[11px] uppercase tracking-[0.22em] text-[#1A241E]/65 mb-2">2. Choose Textile Swatch</label>
+                  <div id="matcher-textiles" class="grid grid-cols-1 sm:grid-cols-3 gap-2.5"></div>
+                </div>
+
+                <div>
+                  <label class="block text-[11px] uppercase tracking-[0.22em] text-[#1A241E]/65 mb-2">3. Choose Atelier Detail</label>
+                  <div id="matcher-details" class="grid grid-cols-1 sm:grid-cols-3 gap-2.5"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Evaluate & Next Controls -->
+            <div class="mt-7 pt-5 border-t border-[#1A241E]/10">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <button id="matcher-submit-btn" type="button" class="px-6 py-3.5 rounded-full bg-[#1A241E] text-white text-xs uppercase tracking-[0.22em] hover:bg-[#2E4639] transition-colors">
+                  Submit Runway Look
+                </button>
+                <button id="matcher-next-btn" type="button" class="px-5 py-3.5 rounded-full bg-[#E4F1EA] text-[#1A241E] text-xs uppercase tracking-[0.22em] hover:bg-[#cfe5d9] transition-colors">
+                  Next Brief →
+                </button>
+              </div>
+              <div id="matcher-status" class="mt-4 p-3.5 rounded-xl bg-[#E4F1EA]/60 text-xs sm:text-sm text-[#1A241E] font-light hidden"></div>
+            </div>
+          </div>
+
+          <!-- GAME B: FABRIC & STITCH REFLEX (PATTERN RUSH — 2D CANVAS) -->
+          <div class="fd-reveal bg-white rounded-[2rem] border border-[#1A241E]/10 p-6 sm:p-8 shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-3 pb-5 border-b border-[#1A241E]/10">
+                <div>
+                  <span class="text-[10px] uppercase tracking-[0.24em] text-[#1A241E]/60">02 · 2D Canvas Reflex</span>
+                  <h3 class="font-editorial text-2xl sm:text-3xl text-[#1A241E] mt-1">Fabric &amp; Stitch Reflex (Pattern Rush)</h3>
+                </div>
+                <div class="flex flex-wrap items-center gap-2">
+                  <div class="px-3.5 py-2 rounded-full bg-[#F9E4EC] text-[#1A241E] text-xs uppercase tracking-[0.16em]">
+                    Score: <strong id="rush-score" class="font-semibold">0</strong>
+                  </div>
+                  <div class="px-3.5 py-2 rounded-full bg-[#E4F1EA] text-[#1A241E] text-xs uppercase tracking-[0.16em]">
+                    Timer: <strong id="rush-timer" class="font-semibold">25</strong>s
+                  </div>
+                  <button id="rush-reset-btn" type="button" class="px-3.5 py-2 rounded-full border border-[#1A241E]/20 text-[11px] uppercase tracking-[0.18em] text-[#1A241E] hover:bg-[#F9E4EC] transition-colors">
+                    Reset
+                  </button>
+                </div>
+              </div>
+
+              <p class="mt-4 text-xs sm:text-sm text-[#1A241E]/75 font-light leading-relaxed">
+                Slide your <span class="font-medium text-[#1A241E]">Atelier Tray</span> (pointer, touch, or <kbd class="px-1.5 py-0.5 text-[11px] bg-[#E4F1EA] rounded">←</kbd> <kbd class="px-1.5 py-0.5 text-[11px] bg-[#E4F1EA] rounded">→</kbd> keys) to collect <span class="text-[#2E4639] font-medium">Silk, Hemp &amp; Botanical Swatches</span> (+15 pts) while dodging <span class="font-medium text-[#1A241E]">Synthetic Waste</span> (-10 pts).
+              </p>
+
+              <!-- 2D Canvas Viewport -->
+              <div class="mt-5 relative rounded-2xl overflow-hidden border border-[#1A241E]/15 bg-gradient-to-b from-white via-[#F9E4EC]/35 to-[#E4F1EA]/55 h-[320px] sm:h-[350px] touch-none">
+                <canvas id="pattern-rush-canvas" class="w-full h-full block"></canvas>
+
+                <!-- Start / Summary Overlay -->
+                <div id="rush-overlay" class="absolute inset-0 bg-white/85 backdrop-blur-[2px] flex flex-col items-center justify-center p-6 text-center">
+                  <span class="text-[10px] uppercase tracking-[0.26em] text-[#2E4639] font-medium mb-1.5">Ferrero Studio Canvas</span>
+                  <h4 id="rush-overlay-title" class="font-editorial text-2xl sm:text-3xl text-[#1A241E]">Pattern Rush</h4>
+                  <p id="rush-overlay-desc" class="text-xs sm:text-sm text-[#1A241E]/75 font-light max-w-xs mt-2">
+                    Catch sustainable fabrics in 25 seconds. Avoid synthetic scraps.
+                  </p>
+                  <button id="rush-start-btn" type="button" class="mt-5 px-7 py-3 rounded-full bg-[#1A241E] text-white text-xs uppercase tracking-[0.22em] hover:bg-[#2E4639] transition-colors">
+                    Start Round
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Legend & Mobile Touch Buttons -->
+            <div class="mt-5 pt-4 border-t border-[#1A241E]/10 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div class="flex flex-wrap items-center gap-3 text-[11px] text-[#1A241E]/75">
+                <span class="inline-flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-[#F9E4EC] border border-[#1A241E]/30"></span>Silk (+15)
+                </span>
+                <span class="inline-flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-[#E4F1EA] border border-[#1A241E]/30"></span>Hemp / Flora (+15)
+                </span>
+                <span class="inline-flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-[#1A241E]"></span>Synthetic (-10)
+                </span>
+              </div>
+
+              <div class="flex items-center gap-2 sm:hidden">
+                <button id="rush-left-btn" type="button" class="flex-1 py-2.5 rounded-xl bg-[#E4F1EA] text-[#1A241E] text-xs uppercase tracking-widest font-medium">← Left</button>
+                <button id="rush-right-btn" type="button" class="flex-1 py-2.5 rounded-xl bg-[#F9E4EC] text-[#1A241E] text-xs uppercase tracking-widest font-medium">Right →</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 6. BESPOKE INQUIRIES / CONTACT FORM                                   -->
+    <!-- ===================================================================== -->
+    <section id="inquiries" class="py-24 md:py-32 px-5 sm:px-8 lg:px-12 bg-white border-t border-[#1A241E]/10">
+      <div class="max-w-5xl mx-auto">
+        <div class="bg-gradient-to-br from-[#F9E4EC]/60 via-white to-[#E4F1EA]/65 rounded-[2.25rem] border border-[#1A241E]/10 p-7 sm:p-12 lg:p-14 shadow-sm fd-reveal">
+          <div class="max-w-2xl">
+            <p class="text-xs uppercase tracking-[0.28em] text-[#2E4639] font-medium mb-3">Private Appointments &amp; Trade</p>
+            <h2 class="font-editorial text-4xl sm:text-5xl md:text-6xl font-light text-[#1A241E] leading-tight">
+              Bespoke <span class="italic">Inquiries</span>
+            </h2>
+            <p class="mt-3 text-sm sm:text-base text-[#1A241E]/75 font-light leading-relaxed">
+              Schedule a custom evening couture fitting, request editorial lookbook loans for press, or connect with our showroom team for wholesale buying appointments.
+            </p>
+          </div>
+
+          <form id="bespoke-inquiry-form" class="mt-9 space-y-6" novalidate>
+            <!-- Inquiry Category Selector -->
+            <div>
+              <label class="block text-[11px] uppercase tracking-[0.22em] text-[#1A241E]/70 mb-3">Inquiry Type</label>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <label class="inquiry-type-card cursor-pointer flex items-center gap-3 p-4 rounded-2xl bg-white border border-[#1A241E]/15 hover:border-[#1A241E] transition-colors">
+                  <input type="radio" name="inquiryType" value="Custom Fitting" checked class="accent-[#1A241E]" />
+                  <div>
+                    <div class="text-xs font-medium uppercase tracking-[0.14em] text-[#1A241E]">Custom Fitting</div>
+                    <div class="text-[11px] text-[#1A241E]/60">Bespoke Couture</div>
+                  </div>
+                </label>
+
+                <label class="inquiry-type-card cursor-pointer flex items-center gap-3 p-4 rounded-2xl bg-white border border-[#1A241E]/15 hover:border-[#1A241E] transition-colors">
+                  <input type="radio" name="inquiryType" value="Press Inquiry" class="accent-[#1A241E]" />
+                  <div>
+                    <div class="text-xs font-medium uppercase tracking-[0.14em] text-[#1A241E]">Press Inquiry</div>
+                    <div class="text-[11px] text-[#1A241E]/60">Editorial &amp; Loans</div>
+                  </div>
+                </label>
+
+                <label class="inquiry-type-card cursor-pointer flex items-center gap-3 p-4 rounded-2xl bg-white border border-[#1A241E]/15 hover:border-[#1A241E] transition-colors">
+                  <input type="radio" name="inquiryType" value="Wholesale Buyer" class="accent-[#1A241E]" />
+                  <div>
+                    <div class="text-xs font-medium uppercase tracking-[0.14em] text-[#1A241E]">Wholesale Buyer</div>
+                    <div class="text-[11px] text-[#1A241E]/60">Showroom &amp; Stockists</div>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Name & Email -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="client-name" class="block text-[11px] uppercase tracking-[0.2em] text-[#1A241E]/70 mb-2">Full Name *</label>
+                <input
+                  id="client-name"
+                  name="name"
+                  type="text"
+                  required
+                  placeholder="Camila Ferrero / Editorial Stylist"
+                  class="w-full px-4 py-3.5 rounded-2xl bg-white border border-[#1A241E]/15 text-sm text-[#1A241E] placeholder:text-[#1A241E]/40 focus:outline-none focus:border-[#1A241E]"
+                />
+              </div>
+
+              <div>
+                <label for="client-email" class="block text-[11px] uppercase tracking-[0.2em] text-[#1A241E]/70 mb-2">Email Address *</label>
+                <input
+                  id="client-email"
+                  name="email"
+                  type="email"
+                  required
+                  placeholder="studio@ferrerodesign.com"
+                  class="w-full px-4 py-3.5 rounded-2xl bg-white border border-[#1A241E]/15 text-sm text-[#1A241E] placeholder:text-[#1A241E]/40 focus:outline-none focus:border-[#1A241E]"
+                />
+              </div>
+            </div>
+
+            <!-- Preferred Date & Collection Focus -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="preferred-date" class="block text-[11px] uppercase tracking-[0.2em] text-[#1A241E]/70 mb-2">Preferred Fitting / Shoot Date</label>
+                <input
+                  id="preferred-date"
+                  name="date"
+                  type="date"
+                  class="w-full px-4 py-3.5 rounded-2xl bg-white border border-[#1A241E]/15 text-sm text-[#1A241E] focus:outline-none focus:border-[#1A241E]"
+                />
+              </div>
+
+              <div>
+                <label for="collection-interest" class="block text-[11px] uppercase tracking-[0.2em] text-[#1A241E]/70 mb-2">Collection / Palette Focus</label>
+                <select
+                  id="collection-interest"
+                  name="collection"
+                  class="w-full px-4 py-3.5 rounded-2xl bg-white border border-[#1A241E]/15 text-sm text-[#1A241E] focus:outline-none focus:border-[#1A241E]"
+                >
+                  <option value="Petal Nocturne (Evening Couture · #F9E4EC)">Petal Nocturne (Evening Couture · Light Pink)</option>
+                  <option value="Verdant Cadence (Sculpted Street · #E4F1EA)">Verdant Cadence (Sculpted Street · Light Green)</option>
+                  <option value="Chalk Monolith (Minimalist Tailoring · #FFFFFF)">Chalk Monolith (Minimalist Tailoring · White)</option>
+                  <option value="Flora Solstice (Full Seasonal Archive)">Flora Solstice (Full Seasonal Archive)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Message -->
+            <div>
+              <label for="inquiry-notes" class="block text-[11px] uppercase tracking-[0.2em] text-[#1A241E]/70 mb-2">Notes, Sizing or Editorial Brief *</label>
+              <textarea
+                id="inquiry-notes"
+                name="notes"
+                rows="4"
+                required
+                placeholder="Share garment silhouettes, event timeline, publication details, or showroom dates..."
+                class="w-full px-4 py-3.5 rounded-2xl bg-white border border-[#1A241E]/15 text-sm text-[#1A241E] placeholder:text-[#1A241E]/40 focus:outline-none focus:border-[#1A241E]"
+              ></textarea>
+            </div>
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2">
+              <button
+                type="submit"
+                class="px-8 py-4 rounded-full bg-[#1A241E] text-white text-xs uppercase tracking-[0.24em] hover:bg-[#2E4639] transition-colors shadow-sm"
+              >
+                Request Atelier Appointment
+              </button>
+              <span class="text-xs text-[#1A241E]/60 font-light">
+                Direct studio concierge response within 24 hours.
+              </span>
+            </div>
+
+            <!-- Interactive Confirmation / Validation Feedback Box -->
+            <div id="inquiry-feedback" role="status" aria-live="polite" class="hidden p-5 rounded-2xl border text-xs sm:text-sm leading-relaxed"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================================================================== -->
+  <!-- EDITORIAL FOOTER                                                      -->
+  <!-- ===================================================================== -->
+  <footer class="bg-[#1A241E] text-white py-14 px-5 sm:px-8 lg:px-12">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+      <div>
+        <div class="font-editorial text-3xl tracking-[0.2em] uppercase">Ferrero Design</div>
+        <p class="mt-2 text-xs text-white/70 font-light max-w-md">
+          Sustainable evening couture and sculpted streetwear crafted with botanical integrity in light pink, light green, and crisp white.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-6 text-xs uppercase tracking-[0.2em] text-white/80">
+        <a href="#lookbook" class="hover:text-[#F9E4EC] transition-colors">Lookbook</a>
+        <a href="#atelier-process" class="hover:text-[#E4F1EA] transition-colors">Process</a>
+        <a href="#philosophy" class="hover:text-[#F9E4EC] transition-colors">Philosophy</a>
+        <a href="#atelier-games" class="hover:text-[#E4F1EA] transition-colors">Games</a>
+        <a href="#inquiries" class="hover:text-[#F9E4EC] transition-colors">Inquiries</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================================================================== -->
+  <!-- EMBEDDED JAVASCRIPT: NAVIGATION, SCROLL REVEAL, GAMES & INQUIRY FORM  -->
+  <!-- ===================================================================== -->
+  <script>
+    (function () {
+      // -------------------------------------------------------------------
+      // 1. MOBILE NAVIGATION DRAWER
+      // -------------------------------------------------------------------
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const iconHamburger = document.getElementById('icon-hamburger');
+      const iconClose = document.getElementById('icon-close');
+
+      function setMobileMenuOpen(isOpen) {
+        mobileMenu.classList.toggle('hidden', !isOpen);
+        iconHamburger.classList.toggle('hidden', isOpen);
+        iconClose.classList.toggle('hidden', !isOpen);
+        menuBtn.setAttribute('aria-expanded', String(isOpen));
+      }
+
+      menuBtn.addEventListener('click', () => {
+        const currentlyExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+        setMobileMenuOpen(!currentlyExpanded);
+      });
+
+      document.querySelectorAll('.mobile-link').forEach((link) => {
+        link.addEventListener('click', () => setMobileMenuOpen(false));
+      });
+
+      // -------------------------------------------------------------------
+      // 2. SCROLL REVEAL MICRO-INTERACTIONS
+      // -------------------------------------------------------------------
+      const revealElements = document.querySelectorAll('.fd-reveal');
+
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12, rootMargin: '0px 0px -30px 0px' }
+      );
+
+      revealElements.forEach((el) => revealObserver.observe(el));
+
+      // -------------------------------------------------------------------
+      // 3. MINI-GAME 1: SILHOUETTE & TEXTILE MATCHER
+      // -------------------------------------------------------------------
+      const briefs = [
+        {
+          title: 'Petal Nocturne Gala',
+          desc: 'Pair a fluid evening silhouette with light pink peace silk and delicate bias drapery.',
+          idealSilhouette: 'bias-gown',
+          idealTextile: 'petal-silk',
+          idealDetail: 'liquid-drape'
+        },
+        {
+          title: 'Verdant Street Architecture',
+          desc: 'Combine a structured street jacket with light green hemp twill and crisp pleat seams.',
+          idealSilhouette: 'street-jacket',
+          idealTextile: 'mint-hemp',
+          idealDetail: 'pleat-architecture'
+        },
+        {
+          title: 'Chalk Monolith Editorial',
+          desc: 'Balance an architectural column coat with pure chalk organic poplin and clean raw trim.',
+          idealSilhouette: 'column-coat',
+          idealTextile: 'chalk-cotton',
+          idealDetail: 'selvedge-trim'
+        },
+        {
+          title: 'Solstice Atelier Capsule',
+          desc: 'Style a sculpted street jacket in botanical sage or rose silk with fluid sash detailing.',
+          idealSilhouette: 'street-jacket',
+          idealTextile: 'petal-silk',
+          idealDetail: 'liquid-drape'
+        }
+      ];
+
+      const silhouetteChoices = [
+        { id: 'bias-gown', label: 'Bias Evening Gown', sub: 'Fluid evening drape' },
+        { id: 'street-jacket', label: 'Sculpted Street Jacket', sub: 'Cropped boxy cut' },
+        { id: 'column-coat', label: 'Column Atelier Coat', sub: 'Linear tailoring' }
+      ];
+
+      const textileChoices = [
+        { id: 'petal-silk', label: 'Light Pink Peace Silk', swatch: '#F9E4EC' },
+        { id: 'mint-hemp', label: 'Light Green Hemp Twill', swatch: '#E4F1EA' },
+        { id: 'chalk-cotton', label: 'White Organic Poplin', swatch: '#FFFFFF' }
+      ];
+
+      const detailChoices = [
+        { id: 'liquid-drape', label: 'Cascade Sash & Hem', sub: 'Soft movement' },
+        { id: 'pleat-architecture', label: 'Box-Pleat Shoulder', sub: 'Sculpted volume' },
+        { id: 'selvedge-trim', label: 'Hand-Bound Seams', sub: 'Tailored precision' }
+      ];
+
+      let currentBriefIdx = 0;
+      let matcherScore = 0;
+      let pickedSilhouette = silhouetteChoices[0].id;
+      let pickedTextile = textileChoices[0].id;
+      let pickedDetail = detailChoices[0].id;
+
+      const matcherScoreEl = document.getElementById('matcher-score');
+      const matcherBriefCounterEl = document.getElementById('matcher-brief-counter');
+      const matcherBriefTitleEl = document.getElementById('matcher-brief-title');
+      const matcherBriefDescEl = document.getElementById('matcher-brief-desc');
+      const matcherSilhouettesEl = document.getElementById('matcher-silhouettes');
+      const matcherTextilesEl = document.getElementById('matcher-textiles');
+      const matcherDetailsEl = document.getElementById('matcher-details');
+      const matcherStatusEl = document.getElementById('matcher-status');
+
+      function renderMatcherBrief() {
+        const b = briefs[currentBriefIdx];
+        matcherBriefCounterEl.textContent = `Brief ${currentBriefIdx + 1} / ${briefs.length}`;
+        matcherBriefTitleEl.textContent = b.title;
+        matcherBriefDescEl.textContent = b.desc;
+      }
+
+      function renderMatcherOptions() {
+        matcherSilhouettesEl.innerHTML = silhouetteChoices
+          .map((opt) => {
+            const selected = opt.id === pickedSilhouette;
+            return `<button type="button" data-sil="${opt.id}" class="sil-btn text-left p-3 rounded-xl border transition-all ${
+              selected
+                ? 'bg-[#1A241E] text-white border-[#1A241E]'
+                : 'bg-[#F9E4EC]/40 text-[#1A241E] border-[#1A241E]/15 hover:bg-[#F9E4EC]'
+            }">
+              <div class="text-xs font-medium">${opt.label}</div>
+              <div class="text-[11px] opacity-75 mt-0.5">${opt.sub}</div>
+            </button>`;
+          })
+          .join('');
+
+        matcherTextilesEl.innerHTML = textileChoices
+          .map((opt) => {
+            const selected = opt.id === pickedTextile;
+            return `<button type="button" data-tex="${opt.id}" class="tex-btn text-left p-3 rounded-xl border transition-all flex items-center gap-2.5 ${
+              selected
+                ? 'bg-[#1A241E] text-white border-[#1A241E]'
+                : 'bg-white text-[#1A241E] border-[#1A241E]/15 hover:bg-[#E4F1EA]/60'
+            }">
+              <span class="w-5 h-5 rounded-full shrink-0 border border-[#1A241E]/25" style="background-color:${opt.swatch}"></span>
+              <span class="text-xs font-medium leading-snug">${opt.label}</span>
+            </button>`;
+          })
+          .join('');
+
+        matcherDetailsEl.innerHTML = detailChoices
+          .map((opt) => {
+            const selected = opt.id === pickedDetail;
+            return `<button type="button" data-det="${opt.id}" class="det-btn text-left p-3 rounded-xl border transition-all ${
+              selected
+                ? 'bg-[#1A241E] text-white border-[#1A241E]'
+                : 'bg-[#E4F1EA]/45 text-[#1A241E] border-[#1A241E]/15 hover:bg-[#E4F1EA]'
+            }">
+              <div class="text-xs font-medium">${opt.label}</div>
+              <div class="text-[11px] opacity-75 mt-0.5">${opt.sub}</div>
+            </button>`;
+          })
+          .join('');
+
+        matcherSilhouettesEl.querySelectorAll('.sil-btn').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            pickedSilhouette = btn.getAttribute('data-sil');
+            renderMatcherOptions();
+          });
+        });
+
+        matcherTextilesEl.querySelectorAll('.tex-btn').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            pickedTextile = btn.getAttribute('data-tex');
+            renderMatcherOptions();
+          });
+        });
+
+        matcherDetailsEl.querySelectorAll('.det-btn').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            pickedDetail = btn.getAttribute('data-det');
+            renderMatcherOptions();
+          });
+        });
+      }
+
+      document.getElementById('matcher-submit-btn').addEventListener('click', () => {
+        const brief = briefs[currentBriefIdx];
+        let points = 10;
+        const matched = [];
+
+        if (pickedSilhouette === brief.idealSilhouette) {
+          points += 15;
+          matched.push('silhouette');
+        }
+        if (pickedTextile === brief.idealTextile) {
+          points += 15;
+          matched.push('textile');
+        }
+        if (pickedDetail === brief.idealDetail) {
+          points += 10;
+          matched.push('atelier detail');
+        }
+
+        matcherScore += points;
+        matcherScoreEl.textContent = String(matcherScore);
+        matcherStatusEl.classList.remove('hidden');
+
+        if (matched.length >= 2) {
+          matcherStatusEl.className = 'mt-4 p-3.5 rounded-xl bg-[#E4F1EA] text-xs sm:text-sm text-[#1A241E] font-normal';
+          matcherStatusEl.textContent = `Runway Note (+${points} pts): Strong alignment on ${matched.join(' & ')} for "${brief.title}".`;
+        } else {
+          matcherStatusEl.className = 'mt-4 p-3.5 rounded-xl bg-[#F9E4EC] text-xs sm:text-sm text-[#1A241E] font-normal';
+          matcherStatusEl.textContent = `Studio Critique (+${points} pts): Bold avant-garde contrast—experiment with another swatch or silhouette to match the brief.`;
+        }
+      });
+
+      document.getElementById('matcher-next-btn').addEventListener('click', () => {
+        currentBriefIdx = (currentBriefIdx + 1) % briefs.length;
+        matcherStatusEl.classList.add('hidden');
+        renderMatcherBrief();
+      });
+
+      document.getElementById('matcher-reset-btn').addEventListener('click', () => {
+        currentBriefIdx = 0;
+        matcherScore = 0;
+        pickedSilhouette = silhouetteChoices[0].id;
+        pickedTextile = textileChoices[0].id;
+        pickedDetail = detailChoices[0].id;
+        matcherScoreEl.textContent = '0';
+        matcherStatusEl.classList.add('hidden');
+        renderMatcherBrief();
+        renderMatcherOptions();
+      });
+
+      renderMatcherBrief();
+      renderMatcherOptions();
+
+      // -------------------------------------------------------------------
+      // 4. MINI-GAME 2: FABRIC & STITCH REFLEX (PATTERN RUSH — 2D CANVAS)
+      // -------------------------------------------------------------------
+      const rushCanvas = document.getElementById('pattern-rush-canvas');
+      const rushCtx = rushCanvas.getContext('2d');
+      const rushScoreEl = document.getElementById('rush-score');
+      const rushTimerEl = document.getElementById('rush-timer');
+      const rushOverlayEl = document.getElementById('rush-overlay');
+      const rushOverlayTitleEl = document.getElementById('rush-overlay-title');
+      const rushOverlayDescEl = document.getElementById('rush-overlay-desc');
+      const rushStartBtn = document.getElementById('rush-start-btn');
+      const rushResetBtn = document.getElementById('rush-reset-btn');
+      const rushLeftBtn = document.getElementById('rush-left-btn');
+      const rushRightBtn = document.getElementById('rush-right-btn');
+
+      let rushRunning = false;
+      let rushScore = 0;
+      let rushSecondsLeft = 25;
+      let rushRafId = null;
+      let rushIntervalId = null;
+      let rushFrameCount = 0;
+      let rushDrops = [];
+
+      const tray = {
+        x: 100,
+        y: 280,
+        w: 104,
+        h: 24,
+        speed: 7.5
+      };
+
+      const inputKeys = { left: false, right: false };
+
+      const swatchTypes = [
+        { label: 'Silk', points: 15, good: true, fill: '#F9E4EC' },
+        { label: 'Hemp', points: 15, good: true, fill: '#E4F1EA' },
+        { label: 'Flora', points: 15, good: true, fill: '#CBE3D5' },
+        { label: 'Synth', points: -10, good: false, fill: '#1A241E' }
+      ];
+
+      function syncRushCanvasSize() {
+        const rect = rushCanvas.getBoundingClientRect();
+        const dpr = window.devicePixelRatio || 1;
+        rushCanvas.width = Math.max(1, Math.floor(rect.width * dpr));
+        rushCanvas.height = Math.max(1, Math.floor(rect.height * dpr));
+        rushCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        tray.y = rect.height - 36;
+        tray.x = Math.min(Math.max(tray.x, 12), Math.max(12, rect.width - tray.w - 12));
+      }
+
+      function spawnSwatchDrop(width) {
+        const spec = swatchTypes[Math.floor(Math.random() * swatchTypes.length)];
+        const radius = 21;
+        rushDrops.push({
+          ...spec,
+          x: radius + 12 + Math.random() * Math.max(20, width - (radius + 12) * 2),
+          y: -radius,
+          r: radius,
+          vy: 2.2 + Math.random() * 1.8
+        });
+      }
+
+      function renderRushFrame() {
+        const rect = rushCanvas.getBoundingClientRect();
+        const w = rect.width;
+        const h = rect.height;
+        rushCtx.clearRect(0, 0, w, h);
+
+        // Subtle tailoring grid lines
+        rushCtx.strokeStyle = 'rgba(26, 36, 30, 0.05)';
+        rushCtx.lineWidth = 1;
+        for (let gx = 40; gx < w; gx += 48) {
+          rushCtx.beginPath();
+          rushCtx.moveTo(gx, 0);
+          rushCtx.lineTo(gx, h);
+          rushCtx.stroke();
+        }
+
+        // Falling swatches
+        rushDrops.forEach((drop) => {
+          rushCtx.beginPath();
+          rushCtx.arc(drop.x, drop.y, drop.r, 0, Math.PI * 2);
+          rushCtx.fillStyle = drop.fill;
+          rushCtx.fill();
+          rushCtx.lineWidth = 1.5;
+          rushCtx.strokeStyle = drop.good ? 'rgba(26, 36, 30, 0.25)' : '#1A241E';
+          rushCtx.stroke();
+
+          rushCtx.fillStyle = drop.good ? '#1A241E' : '#FFFFFF';
+          rushCtx.font = '500 10px Inter, sans-serif';
+          rushCtx.textAlign = 'center';
+          rushCtx.textBaseline = 'middle';
+          rushCtx.fillText(drop.label, drop.x, drop.y);
+        });
+
+        // Atelier tray
+        rushCtx.fillStyle = '#1A241E';
+        rushCtx.beginPath();
+        rushCtx.roundRect(tray.x, tray.y, tray.w, tray.h, 12);
+        rushCtx.fill();
+
+        rushCtx.fillStyle = '#FFFFFF';
+        rushCtx.font = '600 10px Inter, sans-serif';
+        rushCtx.textAlign = 'center';
+        rushCtx.textBaseline = 'middle';
+        rushCtx.fillText('ATELIER TRAY', tray.x + tray.w / 2, tray.y + tray.h / 2 + 0.5);
+      }
+
+      function tickRushGame() {
+        const rect = rushCanvas.getBoundingClientRect();
+        const w = rect.width;
+
+        if (inputKeys.left) tray.x -= tray.speed;
+        if (inputKeys.right) tray.x += tray.speed;
+        tray.x = Math.min(Math.max(tray.x, 10), Math.max(10, w - tray.w - 10));
+
+        rushFrameCount += 1;
+        if (rushFrameCount % 34 === 0) {
+          spawnSwatchDrop(w);
+        }
+
+        const remaining = [];
+        for (const drop of rushDrops) {
+          drop.y += drop.vy;
+
+          const overlapX = drop.x + drop.r > tray.x && drop.x - drop.r < tray.x + tray.w;
+          const overlapY = drop.y + drop.r >= tray.y && drop.y - drop.r <= tray.y + tray.h;
+
+          if (overlapX && overlapY) {
+            rushScore = Math.max(0, rushScore + drop.points);
+            rushScoreEl.textContent = String(rushScore);
+            continue;
+          }
+
+          if (drop.y - drop.r <= rect.height + 12) {
+            remaining.push(drop);
+          }
+        }
+        rushDrops = remaining;
+
+        renderRushFrame();
+        if (rushRunning) {
+          rushRafId = requestAnimationFrame(tickRushGame);
+        }
+      }
+
+      function finishRushRound() {
+        rushRunning = false;
+        if (rushRafId) cancelAnimationFrame(rushRafId);
+        if (rushIntervalId) clearInterval(rushIntervalId);
+        rushOverlayTitleEl.textContent = 'Round Complete';
+        rushOverlayDescEl.textContent = `Final Studio Score: ${rushScore} pts. Ready for another runway sprint?`;
+        rushStartBtn.textContent = 'Play Again';
+        rushOverlayEl.classList.remove('hidden');
+      }
+
+      function startRushRound() {
+        syncRushCanvasSize();
+        rushScore = 0;
+        rushSecondsLeft = 25;
+        rushDrops = [];
+        rushFrameCount = 28;
+        rushRunning = true;
+        rushScoreEl.textContent = '0';
+        rushTimerEl.textContent = '25';
+        rushOverlayEl.classList.add('hidden');
+
+        if (rushRafId) cancelAnimationFrame(rushRafId);
+        if (rushIntervalId) clearInterval(rushIntervalId);
+
+        rushIntervalId = setInterval(() => {
+          rushSecondsLeft -= 1;
+          rushTimerEl.textContent = String(Math.max(0, rushSecondsLeft));
+          if (rushSecondsLeft <= 0) {
+            finishRushRound();
+          }
+        }, 1000);
+
+        tickRushGame();
+      }
+
+      function resetRushGame() {
+        rushRunning = false;
+        if (rushRafId) cancelAnimationFrame(rushRafId);
+        if (rushIntervalId) clearInterval(rushIntervalId);
+        rushScore = 0;
+        rushSecondsLeft = 25;
+        rushDrops = [];
+        rushScoreEl.textContent = '0';
+        rushTimerEl.textContent = '25';
+        rushOverlayTitleEl.textContent = 'Pattern Rush';
+        rushOverlayDescEl.textContent = 'Catch sustainable fabrics in 25 seconds. Avoid synthetic scraps.';
+        rushStartBtn.textContent = 'Start Round';
+        rushOverlayEl.classList.remove('hidden');
+        syncRushCanvasSize();
+        renderRushFrame();
+      }
+
+      rushStartBtn.addEventListener('click', startRushRound);
+      rushResetBtn.addEventListener('click', resetRushGame);
+
+      rushCanvas.addEventListener('mousemove', (e) => {
+        const rect = rushCanvas.getBoundingClientRect();
+        tray.x = e.clientX - rect.left - tray.w / 2;
+      });
+
+      rushCanvas.addEventListener(
+        'touchmove',
+        (e) => {
+          if (e.touches.length > 0) {
+            const rect = rushCanvas.getBoundingClientRect();
+            tray.x = e.touches[0].clientX - rect.left - tray.w / 2;
+          }
+        },
+        { passive: true }
+      );
+
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') inputKeys.left = true;
+        if (e.key === 'ArrowRight') inputKeys.right = true;
+      });
+
+      window.addEventListener('keyup', (e) => {
+        if (e.key === 'ArrowLeft') inputKeys.left = false;
+        if (e.key === 'ArrowRight') inputKeys.right = false;
+      });
+
+      rushLeftBtn.addEventListener('pointerdown', () => { inputKeys.left = true; });
+      rushLeftBtn.addEventListener('pointerup', () => { inputKeys.left = false; });
+      rushLeftBtn.addEventListener('pointerleave', () => { inputKeys.left = false; });
+      rushRightBtn.addEventListener('pointerdown', () => { inputKeys.right = true; });
+      rushRightBtn.addEventListener('pointerup', () => { inputKeys.right = false; });
+      rushRightBtn.addEventListener('pointerleave', () => { inputKeys.right = false; });
+
+      window.addEventListener('resize', () => {
+        syncRushCanvasSize();
+        renderRushFrame();
+      });
+
+      syncRushCanvasSize();
+      renderRushFrame();
+
+      // -------------------------------------------------------------------
+      // 5. BESPOKE INQUIRIES FORM SUBMISSION & INTERACTIVE FEEDBACK
+      // -------------------------------------------------------------------
+      const inquiryForm = document.getElementById('bespoke-inquiry-form');
+      const inquiryFeedback = document.getElementById('inquiry-feedback');
+
+      inquiryForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const formData = new FormData(inquiryForm);
+        const type = String(formData.get('inquiryType') || 'Custom Fitting');
+        const name = String(formData.get('name') || '').trim();
+        const email = String(formData.get('email') || '').trim();
+        const dateVal = String(formData.get('date') || '').trim();
+        const collectionVal = String(formData.get('collection') || '');
+        const notes = String(formData.get('notes') || '').trim();
+
+        inquiryFeedback.classList.remove('hidden');
+
+        if (!name || !email || !notes) {
+          inquiryFeedback.className = 'p-5 rounded-2xl border border-rose-900/20 bg-[#F9E4EC] text-xs sm:text-sm text-[#1A241E]';
+          inquiryFeedback.textContent = 'Please complete your name, email address, and inquiry notes so our atelier concierge can assist you.';
+          return;
+        }
+
+        const dateLine = dateVal ? ` for ${dateVal}` : '';
+        inquiryFeedback.className = 'p-5 rounded-2xl border border-[#2E4639]/25 bg-[#E4F1EA] text-xs sm:text-sm text-[#1A241E]';
+        inquiryFeedback.innerHTML = `
+          <strong class="font-medium block mb-1">Appointment Request Confirmed — Ferrero Design Atelier</strong>
+          Thank you, <strong>${name}</strong>. Your <strong>${type}</strong> inquiry${dateLine} regarding <em>${collectionVal}</em> has been logged for <strong>${email}</strong>. Our studio director will follow up shortly.
+        `;
+        inquiryForm.reset();
+      });
+    })();
+  </script>
+</body>
+</html>
